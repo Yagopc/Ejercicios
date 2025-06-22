@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ejercicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ff6b6b;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card {
+            background: rgba(30, 30, 50, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid #444;
+        }
+        
+        .card-title {
+            color: #ff7e5f;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #feb47b;
+            font-weight: 500;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 2px solid #444;
+            background: rgba(20, 20, 30, 0.8);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #ff7e5f;
+            box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.3);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-calculate {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+        }
+        
+        .btn-view {
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: #fff;
+        }
+        
+        .btn-save {
+            background: linear-gradient(to right, #2196F3, #21CBF3);
+            color: #fff;
+        }
+        
+        .btn-load {
+            background: linear-gradient(to right, #9C27B0, #E91E63);
+            color: #fff;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(1px);
+        }
+        
+        .resultados {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 100, 0, 0.2);
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid #4CAF50;
+            display: none;
+        }
+        
+        .resultados h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .result-value {
+            font-weight: bold;
+            color: #feb47b;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: rgba(30, 30, 50, 0.95);
+            margin: 40px auto;
+            max-width: 95%;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            padding: 30px 20px 20px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .close-modal:hover {
+            background: #ff5252;
+            transform: rotate(90deg);
+        }
+        
+        #grafica-container {
+            width: 100%;
+            height: 70vh;
+            padding: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            background: rgba(40, 167, 69, 0.9);
+            color: white;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: translateX(200%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 2000;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        #cargarArchivo {
+            display: none;
+        }
+        
+        .totales {
+            background: rgba(0, 100, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none;
+            border: 2px solid #4CAF50;
+        }
+        
+        .totales h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .data-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .data-option {
+            padding: 8px 15px;
+            background: rgba(20, 20, 30, 0.8);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #444;
+        }
+        
+        .data-option.selected {
+            background: #ff7e5f;
+            border-color: #ff7e5f;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+            
+            button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .data-option {
+                padding: 6px 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Ejercicio</h1>
+        </header>
+        
+        <div class="card">
+            <div class="card-title">
+                Datos del Ejercicio
+            </div>
+            
+            <div class="form-group">
+                <label for="tipoDeporte">Tipo de deporte:</label>
+                <select id="tipoDeporte">
+                    <option value="bicicleta">Bicicleta</option>
+                    <option value="andar">Andar</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tiempo">Tiempo de ejercicio (minutos):</label>
+                <input type="number" id="tiempo" min="1" max="180" value="30">
+            </div>
+            
+            <div class="form-group">
+                <label for="edad">Edad (años):</label>
+                <input type="number" id="edad" min="1" max="120" value="61">
+            </div>
+            
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" min="30" max="200" step="0.1" value="79">
+            </div>
+            
+            <div class="form-group">
+                <label for="velocidad">Velocidad media (km/h):</label>
+                <input type="number" id="velocidad" min="5" max="40" step="0.1" value="17">
+            </div>
+            
+            <div class="form-group">
+                <label for="nivel">Nivel de esfuerzo:</label>
+                <select id="nivel">
+                    <option value="0">Nivel 0: Sin esfuerzo</option>
+                    <option value="1">Nivel 1: Muy ligero</option>
+                    <option value="3">Nivel 3: Ligero</option>
+                    <option value="4" selected>Nivel 4: Moderado</option>
+                    <option value="5">Nivel 5: Medio</option>
+                    <option value="6">Nivel 6: Intenso</option>
+                    <option value="7">Nivel 7: Muy intenso</option>
+                    <option value="8">Nivel 8: Extremo</option>
+                    <option value="9">Nivel 9: Muy extremo</option>
+                    <option value="10">Nivel 10: Máximo</option>
+                </select>
+            </div>
+            
+            <div class="btn-group">
+                <button class="btn-calculate" id="btnCalcular">
+                    Calcular
+                </button>
+                <button class="btn-save" id="btnGuardar">
+                    Guardar
+                </button>
+                <button class="btn-view" id="btnVer">
+                    Ver Gráfica
+                </button>
+            </div>
+            
+            <button class="btn-load" id="btnCargar">
+                Cargar Datos
+            </button>
+            <input type="file" id="cargarArchivo" accept=".json">
+        </div>
+        
+        <div class="totales" id="totales">
+            <h3>Totales Acumulados</h3>
+            <div class="result-item">
+                <span>Kilómetros totales:</span>
+                <span class="result-value" id="total-km">0 km</span>
+            </div>
+            <div class="result-item">
+                <span>Calorías totales:</span>
+                <span class="result-value" id="total-calorias">0 kcal</span>
+            </div>
+        </div>
+        
+        <div class="resultados" id="resultados">
+            <h2>Resultados del Ejercicio</h2>
+            <div class="result-item">
+                <span>Calorías quemadas:</span>
+                <span class="result-value" id="calorias">0 kcal</span>
+            </div>
+            <div class="result-item">
+                <span>Distancia estimada:</span>
+                <span class="result-value" id="distancia">0 km</span>
+            </div>
+            <div class="result-item">
+                <span>Intensidad:</span>
+                <span class="result-value" id="intensidad">Moderada</span>
+            </div>
+            <div class="result-item">
+                <span>Equivalente en pasos:</span>
+                <span class="result-value" id="pasos">0 pasos</span>
+            </div>
+            <div class="result-item">
+                <span>Velocidad utilizada:</span>
+                <span class="result-value" id="velocidad-usada">17 km/h</span>
+            </div>
+            <div class="result-item">
+                <span>Tipo de deporte:</span>
+                <span class="result-value" id="tipo-deporte">Bicicleta</span>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Datos guardados en <strong>datosejercicios.json</strong></p>
+        </footer>
+    </div>
+    
+    <div class="modal" id="modalGrafica">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <div class="modal-header">
+                <h2 style="color: #feb47b;">Progreso de Ejercicios</h2>
+                <p>Selecciona el dato que deseas visualizar</p>
+            </div>
+            
+            <div class="data-selector" id="dataSelector">
+                <div class="data-option selected" data-type="calorias">Calorías</div>
+                <div class="data-option" data-type="distancia">Distancia</div>
+                <div class="data-option" data-type="peso">Peso</div>
+                <div class="data-option" data-type="velocidad">Velocidad</div>
+                <div class="data-option" data-type="tiempo">Tiempo</div>
+            </div>
+            
+            <div id="grafica-container">
+                <canvas id="grafica"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        ¡Datos guardados correctamente!
+    </div>
+
+    <script>
+        // Mapeo de niveles a MET (Equivalentes Metabólicos)
+        const nivelesMET = {
+            0: 2.0,   // Muy ligero
+            1: 3.0,   // Ligero
+            3: 4.5,   // Moderado bajo
+            4: 6.5,   // Moderado (nivel base)
+            5: 7.5,   // Moderado alto
+            6: 8.5,   // Intenso
+            7: 10.0,  // Muy intenso
+            8: 11.5,  // Extremo
+            9: 13.0,  // Muy extremo
+            10: 14.5  // Máximo
+        };
+        
+        // Mapeo de niveles a velocidad (km/h)
+        const nivelesVelocidad = {
+            0: 8,     // Muy lento
+            1: 10,    // Lento
+            3: 14,    // Moderado
+            4: 17,    // Moderado rápido
+            5: 19,    // Rápido
+            6: 21,    // Muy rápido
+            7: 18,    // Menor velocidad por pendiente
+            8: 16,    // Velocidad reducida
+            9: 14,    // Velocidad muy reducida
+            10: 12    // Velocidad mínima
+        };
+        
+        // Mapeo de niveles a descripción de intensidad
+        const nivelesIntensidad = {
+            0: "Muy baja",
+            1: "Baja",
+            3: "Moderada baja",
+            4: "Moderada",
+            5: "Moderada alta",
+            6: "Alta",
+            7: "Muy alta",
+            8: "Extrema",
+            9: "Muy extrema",
+            10: "Máxima"
+        };
+        
+        // Variables globales
+        let datosEjercicios = [];
+        let resultadosActuales = null;
+        let myChart = null;
+        let tipoDatoGrafica = "calorias";
+        
+        // Inicialización cuando el DOM está cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar eventos
+            document.getElementById('btnCalcular').addEventListener('click', calcularEjercicio);
+            document.getElementById('btnGuardar').addEventListener('click', guardarEjercicio);
+            document.getElementById('btnVer').addEventListener('click', mostrarGrafica);
+            document.getElementById('btnCargar').addEventListener('click', () => {
+                document.getElementById('cargarArchivo').click();
+            });
+            document.getElementById('cargarArchivo').addEventListener('change', cargarDatosDesdeArchivo);
+            document.getElementById('closeModal').addEventListener('click', cerrarModal);
+            document.getElementById('nivel').addEventListener('change', actualizarVelocidadSugerida);
+            
+            // Configurar selector de datos para gráfica
+            const options = document.querySelectorAll('.data-option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    tipoDatoGrafica = this.getAttribute('data-type');
+                    actualizarGrafica();
+                });
+            });
+            
+            // Inicializar con datos de ejemplo
+            
+        });
+        
+        
+        
+        function cargarDatosDesdeArchivo(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                try {
+                    datosEjercicios = JSON.parse(event.target.result);
+                    mostrarNotificacion('Datos cargados correctamente');
+                    actualizarTotales();
+                } catch (error) {
+                    alert("Error al leer el archivo. Asegúrate de que es un JSON válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        function calcularEjercicio() {
+            const tiempo = parseInt(document.getElementById('tiempo').value) || 30;
+            const edad = parseInt(document.getElementById('edad').value) || 35;
+            const peso = parseFloat(document.getElementById('peso').value) || 75;
+            const nivel = parseInt(document.getElementById('nivel').value) || 4;
+            const velocidadManual = parseFloat(document.getElementById('velocidad').value) || null;
+            const tipoDeporte = document.getElementById('tipoDeporte').value;
+            
+            // Validar datos
+            if (tiempo <= 0 || edad <= 0 || peso <= 0) {
+                alert('Por favor, introduce valores válidos');
+                return;
+            }
+            
+            // Calcular distancia
+            let velocidad = velocidadManual || nivelesVelocidad[nivel] || 17;
+            
+            // Ajustar velocidad para caminar
+            if (tipoDeporte === "andar" && velocidad > 8) {
+                velocidad = 6;
+            }
+            
+            const tiempoHoras = tiempo / 60;
+            const distancia = (velocidad * tiempoHoras).toFixed(1);
+            
+            // Calcular calorías con ajuste según tipo de deporte
+            let met = nivelesMET[nivel] || 6.5;
+            
+            // Ajuste MET para caminar
+            if (tipoDeporte === "andar") {
+                met = met * 0.7;
+            }
+            
+            let calorias = met * peso * tiempoHoras;
+            
+            // Ajuste por edad
+            const factorEdad = 1 - ((edad - 30) * 0.005);
+            calorias *= Math.max(factorEdad, 0.85);
+            
+            // Redondear calorías
+            calorias = Math.round(calorias);
+            
+            // Guardar resultados actuales
+            resultadosActuales = {
+                fecha: new Date().toISOString(),
+                tiempo: tiempo,
+                edad: edad,
+                peso: peso,
+                nivel: nivel,
+                calorias: calorias,
+                distancia: distancia,
+                velocidad: velocidad,
+                intensidad: nivelesIntensidad[nivel] || "Moderada",
+                tipo: tipoDeporte
+            };
+            
+            // Mostrar resultados
+            mostrarResultados();
+        }
+        
+        function mostrarResultados() {
+            if (!resultadosActuales) return;
+            
+            document.getElementById('calorias').textContent = resultadosActuales.calorias + ' kcal';
+            document.getElementById('distancia').textContent = resultadosActuales.distancia + ' km';
+            document.getElementById('intensidad').textContent = resultadosActuales.intensidad;
+            document.getElementById('velocidad-usada').textContent = resultadosActuales.velocidad + ' km/h';
+            document.getElementById('tipo-deporte').textContent = resultadosActuales.tipo === "bicicleta" ? "Bicicleta" : "Andar";
+            
+            // Calcular equivalente en pasos (aprox 0.04 kcal/paso)
+            const pasos = Math.round(resultadosActuales.calorias / 0.04);
+            document.getElementById('pasos').textContent = pasos.toLocaleString() + ' pasos';
+            
+            document.getElementById('resultados').style.display = 'block';
+        }
+        
+        function guardarEjercicio() {
+            if (!resultadosActuales) {
+                alert('Primero debes calcular los resultados');
+                return;
+            }
+            
+            // Agregar a los datos existentes
+            datosEjercicios.push(resultadosActuales);
+            
+            // Ordenar por fecha
+            datosEjercicios.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+            
+            // Crear y descargar el JSON
+            const blob = new Blob([JSON.stringify(datosEjercicios, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'datosejercicios.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            // Actualizar totales
+            actualizarTotales();
+            
+            mostrarNotificacion('¡Datos guardados en datosejercicios.json!');
+        }
+        
+        function actualizarTotales() {
+            if (datosEjercicios.length === 0) {
+                document.getElementById('totales').style.display = 'none';
+                return;
+            }
+            
+            let totalCalorias = 0;
+            let totalKm = 0;
+            
+            datosEjercicios.forEach(ej => {
+                totalCalorias += ej.calorias;
+                totalKm += parseFloat(ej.distancia);
+            });
+            
+            document.getElementById('total-calorias').textContent = totalCalorias.toLocaleString() + ' kcal';
+            document.getElementById('total-km').textContent = totalKm.toFixed(1) + ' km';
+            document.getElementById('totales').style.display = 'block';
+        }
+        
+        function mostrarGrafica() {
+            if (datosEjercicios.length === 0) {
+                alert('No hay datos de ejercicios guardados. Primero calcula y guarda un ejercicio.');
+                return;
+            }
+            
+            document.getElementById('modalGrafica').style.display = 'block';
+            actualizarGrafica();
+        }
+        
+        function actualizarGrafica() {
+            // Ordenar ejercicios por fecha
+            const ejerciciosOrdenados = [...datosEjercicios].sort((a, b) => 
+                new Date(a.fecha) - new Date(b.fecha)
+            );
+            
+            const fechas = ejerciciosOrdenados.map(ej => 
+                new Date(ej.fecha).toLocaleDateString()
+            );
+            
+            // Obtener datos según el tipo seleccionado
+            const datos = ejerciciosOrdenados.map(ej => ej[tipoDatoGrafica]);
+            
+            // Configurar etiquetas y colores
+            let label, color, unidad;
+            switch(tipoDatoGrafica) {
+                case 'calorias':
+                    label = 'Calorías Quemadas';
+                    color = '#FF6384';
+                    unidad = 'kcal';
+                    break;
+                case 'distancia':
+                    label = 'Distancia Recorrida';
+                    color = '#36A2EB';
+                    unidad = 'km';
+                    break;
+                case 'peso':
+                    label = 'Peso Corporal';
+                    color = '#FFCE56';
+                    unidad = 'kg';
+                    break;
+                case 'velocidad':
+                    label = 'Velocidad Media';
+                    color = '#4BC0C0';
+                    unidad = 'km/h';
+                    break;
+                case 'tiempo':
+                    label = 'Tiempo de Ejercicio';
+                    color = '#9966FF';
+                    unidad = 'min';
+                    break;
+                default:
+                    label = 'Calorías Quemadas';
+                    color = '#FF6384';
+                    unidad = 'kcal';
+            }
+            
+            const ctx = document.getElementById('grafica').getContext('2d');
+            
+            // Destruir gráfica anterior si existe
+            if (myChart) {
+                myChart.destroy();
+            }
+            
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: fechas,
+                    datasets: [{
+                        label: label,
+                        data: datos,
+                        borderColor: color,
+                        backgroundColor: color + '33',
+                        borderWidth: 3,
+                        pointBackgroundColor: color,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#fff',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: label,
+                            color: '#feb47b',
+                            font: {
+                                size: 18
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(30, 30, 50, 0.9)',
+                            titleColor: '#ff7e5f',
+                            bodyColor: '#fff',
+                            borderColor: '#444',
+                            borderWidth: 1,
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    const index = context.dataIndex;
+                                    const ejercicio = ejerciciosOrdenados[index];
+                                    return [
+                                        `${label}: ${ejercicio[tipoDatoGrafica]} ${unidad}`,
+                                        `Tipo: ${ejercicio.tipo === "bicicleta" ? "Bicicleta" : "Andar"}`,
+                                        `Duración: ${ejercicio.tiempo} min`,
+                                        `Intensidad: ${ejercicio.intensidad}`,
+                                        `Fecha: ${fechas[index]}`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: tipoDatoGrafica !== 'peso',
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: unidad,
+                                color: '#fff',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff',
+                                font: {
+                                    size: 12
+                                },
+                                maxRotation: 45,
+                                minRotation: 45
+                            },
+                            title: {
+                                display: true,
+                                text: 'Fecha',
+                                color: '#fff',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function cerrarModal() {
+            document.getElementById('modalGrafica').style.display = 'none';
+        }
+        
+        function actualizarVelocidadSugerida() {
+            const nivel = parseInt(document.getElementById('nivel').value);
+            const velocidad = nivelesVelocidad[nivel] || 17;
+            document.getElementById('velocidad').value = velocidad;
+        }
+        
+        function mostrarNotificacion(mensaje) {
+            const notification = document.getElementById('notification');
+            notification.textContent = mensaje;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
