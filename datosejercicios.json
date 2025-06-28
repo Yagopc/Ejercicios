@@ -1,5 +1,4 @@
 [
- 
   {
     "fecha": "2025-06-11T21:44:54.568Z",
     "tiempo": 30,
@@ -20,7 +19,7 @@
     "calorias": 115,
     "distancia": "8.5",
     "velocidad": 18,
-     "tipo": "bicicleta"
+    "tipo": "bicicleta"
   },
   {
     "fecha": "2025-06-13T21:44:54.568Z",
@@ -75,7 +74,7 @@
     "calorias": 133,
     "distancia": "9.1",
     "velocidad": 17,
-     "tipo": "bicicleta"
+    "tipo": "bicicleta"
   },
   {
     "fecha": "2025-06-18T07:48:20.530Z",
@@ -86,9 +85,8 @@
     "calorias": 133,
     "distancia": "9.1",
     "velocidad": 17,
-     "tipo": "bicicleta"
+    "tipo": "bicicleta"
   },
-  
   {
     "fecha": "2025-06-19T08:18:30.047Z",
     "tiempo": 33,
@@ -131,7 +129,7 @@
     "calorias": 270,
     "distancia": "6",
     "velocidad": 5.7,
-     "tipo": "andar"
+    "tipo": "andar"
   },
   {
     "fecha": "2025-06-23T08:18:30.047Z",
@@ -142,7 +140,7 @@
     "calorias": 200,
     "distancia": "14",
     "velocidad": 17,
-     "tipo": "bici"
+    "tipo": "bici"
   },
   {
     "fecha": "2025-06-24T08:18:30.047Z",
@@ -152,7 +150,7 @@
     "nivel": 4,
     "calorias": 250,
     "distancia": "5.7",
-    "velocidad": 5.7,  
+    "velocidad": 5.7,
     "tipo": "andar"
   },
   {
@@ -164,7 +162,7 @@
     "calorias": 250,
     "distancia": "16.7",
     "velocidad": 15.7,
-     "tipo": "bici"
+    "tipo": "bici"
   },
   {
     "fecha": "2025-06-26T08:18:30.047Z",
@@ -175,7 +173,7 @@
     "calorias": 250,
     "distancia": "5.7",
     "velocidad": 5.7,
-     "tipo": "andar"
+    "tipo": "andar"
   },
   {
     "fecha": "2025-06-27T08:18:30.047Z",
@@ -186,6 +184,6 @@
     "calorias": 250,
     "distancia": "5.7",
     "velocidad": 5.7,
-     "tipo": "andar"
-  }
-]
+    "tipo": "andar"
+  
+   ]
