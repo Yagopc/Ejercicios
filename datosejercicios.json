@@ -9,7 +9,6 @@
     "calorias": 115,
     "distancia": "8.5",
     "velocidad": 18,
-    
     "tipo": "bicicleta"
   },
   {
@@ -21,8 +20,7 @@
     "calorias": 115,
     "distancia": "8.5",
     "velocidad": 18,
-    
-    "tipo": "bicicleta"
+     "tipo": "bicicleta"
   },
   {
     "fecha": "2025-06-13T21:44:54.568Z",
@@ -33,7 +31,6 @@
     "calorias": 111,
     "distancia": "8",
     "velocidad": 17,
-    
     "tipo": "bicicleta"
   },
   {
@@ -45,7 +42,6 @@
     "calorias": 131,
     "distancia": "9",
     "velocidad": 19,
-    
     "tipo": "bicicleta"
   },
   {
@@ -57,7 +53,6 @@
     "calorias": 131,
     "distancia": "8.5",
     "velocidad": 16,
-    
     "tipo": "andar"
   },
   {
@@ -69,7 +64,6 @@
     "calorias": 131,
     "distancia": "8.5",
     "velocidad": 16,
-    
     "tipo": "bicicleta"
   },
   {
@@ -81,8 +75,7 @@
     "calorias": 133,
     "distancia": "9.1",
     "velocidad": 17,
-    
-    "tipo": "bicicleta"
+     "tipo": "bicicleta"
   },
   {
     "fecha": "2025-06-18T07:48:20.530Z",
@@ -93,8 +86,7 @@
     "calorias": 133,
     "distancia": "9.1",
     "velocidad": 17,
-    
-    "tipo": "bicicleta"
+     "tipo": "bicicleta"
   },
   
   {
@@ -106,7 +98,6 @@
     "calorias": 137,
     "distancia": "10.0",
     "velocidad": 18.2,
-    
     "tipo": "bicicleta"
   },
   {
@@ -118,7 +109,6 @@
     "calorias": 137,
     "distancia": "10.0",
     "velocidad": 18.2,
-    
     "tipo": "bicicleta"
   },
   {
@@ -130,7 +120,6 @@
     "calorias": 250,
     "distancia": "4.78",
     "velocidad": 5.7,
-    
     "tipo": "andar"
   },
   {
@@ -142,8 +131,7 @@
     "calorias": 270,
     "distancia": "6",
     "velocidad": 5.7,
-    
-    "tipo": "andar"
+     "tipo": "andar"
   },
   {
     "fecha": "2025-06-23T08:18:30.047Z",
@@ -153,9 +141,8 @@
     "nivel": 4,
     "calorias": 200,
     "distancia": "14",
-    "velocidad": 27,
-    
-    "tipo": "bici"
+    "velocidad": 17,
+     "tipo": "bici"
   },
   {
     "fecha": "2025-06-24T08:18:30.047Z",
@@ -165,8 +152,7 @@
     "nivel": 4,
     "calorias": 250,
     "distancia": "5.7",
-    "velocidad": 5.7,
-    
+    "velocidad": 5.7,  
     "tipo": "andar"
   },
   {
@@ -178,8 +164,7 @@
     "calorias": 250,
     "distancia": "16.7",
     "velocidad": 15.7,
-    
-    "tipo": "bici"
+     "tipo": "bici"
   },
   {
     "fecha": "2025-06-26T08:18:30.047Z",
@@ -190,8 +175,7 @@
     "calorias": 250,
     "distancia": "5.7",
     "velocidad": 5.7,
-    
-    "tipo": "andar"
+     "tipo": "andar"
   },
   {
     "fecha": "2025-06-27T08:18:30.047Z",
@@ -202,7 +186,6 @@
     "calorias": 250,
     "distancia": "5.7",
     "velocidad": 5.7,
-    
-    "tipo": "andar"
+     "tipo": "andar"
   }
 ]
