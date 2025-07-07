@@ -210,7 +210,7 @@
     "tipo": "bicicleta"
   },
   {
-    "fecha": "2025-07-1T07:58:29.128Z",
+    "fecha": "2025-07-01T07:58:29.128Z",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
@@ -220,7 +220,7 @@
     "tipo": "bicicleta"
   },
   {
-    "fecha": "2025-07-2T07:58:29.128Z",
+    "fecha": "2025-07-02T07:58:29.128Z",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
@@ -230,7 +230,7 @@
     "tipo": "bicicleta"
   },
   {
-    "fecha": "2025-07-3T07:58:29.128Z",
+    "fecha": "2025-07-03T07:58:29.128Z",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
@@ -240,7 +240,7 @@
     "tipo": "bicicleta"
   },
   {
-    "fecha": "2025-07-4T07:58:29.128Z",
+    "fecha": "2025-07-04T07:58:29.128Z",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
@@ -250,7 +250,7 @@
     "tipo": "bicicleta"
   },
     {
-    "fecha": "2025-07-5T07:58:29.128Z",
+    "fecha": "2025-07-05T07:58:29.128Z",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
@@ -258,6 +258,26 @@
     "distancia": 16,
     "velocidad":15,
     "tipo": "bicicleta"
-    }
+    },
+      {
+    "fecha": "2025-07-06T07:58:29.128Z",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 76.2,
+    "calorias": 242,
+    "distancia": 16,
+    "velocidad":15,
+    "tipo": "bicicleta"
+      },
+      {
+    "fecha": "2025-07-07T07:58:29.128Z",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 76.1,
+    "calorias": 242,
+    "distancia": 16,
+    "velocidad":15,
+    "tipo": "bicicleta"
+      }
 ]
 
