@@ -280,14 +280,27 @@
     "tipo": "bicicleta"
       },
   {
- "fecha": "2025-07-08T07:58:29.128Z",
+ "fecha": "2025-07-09T07:58:29.128Z",
   "tiempo": 60,
     "edad": 61,
-    "peso": 76.1,
+    "peso": 75.8,
+    "calorias": 242,
+    "distancia": 15,
+    "velocidad":15,
+    "tipo": "bicicleta"
+  },
+    {
+ "fecha": "2025-07-10T07:58:29.128Z",
+  "tiempo": 60,
+    "edad": 61,
+    "peso": 75.4,
     "calorias": 242,
     "distancia": 16,
     "velocidad":15,
     "tipo": "bicicleta"
   }
+]
+
+  
 ]
 
