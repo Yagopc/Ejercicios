@@ -329,7 +329,17 @@
     "distancia": 16,
     "velocidad":15,
     "tipo": "bicicleta"
-  }
+  },
+{
+ "fecha": "2025-07-15T07:58:29.128Z",
+  "tiempo": 60,
+    "edad": 61,
+    "peso": 74.4,
+    "calorias": 242,
+    "distancia": 16,
+    "velocidad":15,
+    "tipo": "bicicleta"
+}
 
 
   
