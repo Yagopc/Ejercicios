@@ -358,5 +358,14 @@
     "calorias": 242,
     "distancia": 15,
     "velocidad":15,
+    "tipo": "bicicleta"},
+  {
+    "fecha": "2025-07-18",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 74.2,
+    "calorias": 242,
+    "distancia": 15,
+    "velocidad":15,
     "tipo": "bicicleta"}
 ]
