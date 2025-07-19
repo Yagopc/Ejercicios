@@ -7,27 +7,30 @@
     "calorias": 280,
     "distancia": 8.5,
     "velocidad": 17,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-12",
     "tiempo": 30,
     "edad": 61,
     "peso": 80.5,
-    "calorias": 275,
+    "calorias": 220,
     "distancia": 8.5,
     "velocidad": 17,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-13",
     "tiempo": 30,
     "edad": 61,
     "peso": 80,
-    "calorias": 260,
+    "calorias": 210,
     "distancia": 8,
     "velocidad": 16,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-14",
@@ -37,7 +40,8 @@
     "calorias": 290,
     "distancia": 9,
     "velocidad": 18,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-15",
@@ -47,7 +51,8 @@
     "calorias": 180,
     "distancia": 8.5,
     "velocidad": 5.3,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-16",
@@ -57,7 +62,8 @@
     "calorias": 270,
     "distancia": 8.5,
     "velocidad": 16,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-17",
@@ -67,7 +73,8 @@
     "calorias": 290,
     "distancia": 9.1,
     "velocidad": 17,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-18",
@@ -77,7 +84,8 @@
     "calorias": 290,
     "distancia": 9.1,
     "velocidad": 17,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-19",
@@ -87,7 +95,8 @@
     "calorias": 320,
     "distancia": 10,
     "velocidad": 18.2,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-20",
@@ -97,7 +106,8 @@
     "calorias": 320,
     "distancia": 10,
     "velocidad": 18.2,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "leve"
   },
   {
     "fecha": "2025-06-21",
@@ -107,7 +117,8 @@
     "calorias": 220,
     "distancia": 4.78,
     "velocidad": 5.7,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-22",
@@ -117,7 +128,8 @@
     "calorias": 240,
     "distancia": 6,
     "velocidad": 6.5,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-23",
@@ -127,7 +139,8 @@
     "calorias": 350,
     "distancia": 14,
     "velocidad": 18.7,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-24",
@@ -137,7 +150,8 @@
     "calorias": 260,
     "distancia": 5.7,
     "velocidad": 5.7,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-25",
@@ -147,7 +161,8 @@
     "calorias": 450,
     "distancia": 16.7,
     "velocidad": 16.7,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-26",
@@ -157,7 +172,8 @@
     "calorias": 260,
     "distancia": 5.7,
     "velocidad": 5.7,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-27",
@@ -167,7 +183,8 @@
     "calorias": 260,
     "distancia": 5.7,
     "velocidad": 5.7,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-28",
@@ -177,7 +194,8 @@
     "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-29",
@@ -187,7 +205,8 @@
     "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-06-30",
@@ -197,184 +216,202 @@
     "calorias": 242,
     "distancia": 6.4,
     "velocidad": 6,
-    "tipo": "andar"
+    "tipo": "andar",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-01",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-02",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-03",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-04",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-05",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-06",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.2,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-07",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.1,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-08",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.1,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-09",
     "tiempo": 60,
     "edad": 61,
     "peso": 76.1,
-    "calorias": 242,
+    "calorias": 400,
     "distancia": 16,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-10",
     "tiempo": 60,
     "edad": 61,
     "peso": 75.5,
-    "calorias": 242,
+    "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-11",
     "tiempo": 60,
     "edad": 61,
     "peso": 75.5,
-    "calorias": 242,
+    "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-12",
     "tiempo": 60,
     "edad": 61,
     "peso": 75.3,
-    "calorias": 242,
+    "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-13",
     "tiempo": 60,
     "edad": 61,
     "peso": 75.2,
-    "calorias": 242,
+    "calorias": 380,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-14",
     "tiempo": 60,
     "edad": 61,
     "peso": 74.8,
-    "calorias": 242,
+    "calorias": 370,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-15",
     "tiempo": 60,
     "edad": 61,
     "peso": 74.4,
-    "calorias": 242,
+    "calorias": 360,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-16",
     "tiempo": 60,
     "edad": 61,
     "peso": 74,
-    "calorias": 242,
+    "calorias": 350,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-17",
     "tiempo": 60,
     "edad": 61,
     "peso": 73.8,
-    "calorias": 242,
+    "calorias": 350,
     "distancia": 15,
     "velocidad": 15,
-    "tipo": "bicicleta"
+    "tipo": "bicicleta",
+    "nivel": "moderado"
   },
   {
     "fecha": "2025-07-18",
     "tiempo": 61,
     "edad": 61,
     "peso": 74.2,
-    "calorias": 317,
+    "calorias": 360,
     "distancia": 15.25,
     "velocidad": 15,
     "tipo": "bicicleta",
@@ -385,10 +422,10 @@
     "tiempo": 65,
     "edad": 61,
     "peso": 74.5,
-    "calorias": 339,
+    "calorias": 390,
     "distancia": 16.25,
     "velocidad": 15,
     "tipo": "bicicleta",
     "nivel": "moderado"
   }
-]
+    ]
