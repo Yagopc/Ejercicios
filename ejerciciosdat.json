@@ -484,12 +484,12 @@
   },
 {
     "fecha": "2025-07-25",
-    "tiempo": 111,
+    "tiempo": 123,
     "edad": 61,
     "peso": 73.4,
-    "calorias": 570,
-    "distancia": 26.5,
-    "velocidad": 14.32,
+    "calorias": 633,
+    "distancia": 30,
+    "velocidad": 14.63,
     "tipo": "bicicleta",
     "nivel": "moderado"
 }]
