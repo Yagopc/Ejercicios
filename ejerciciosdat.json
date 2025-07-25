@@ -481,7 +481,18 @@
     "velocidad": 13.89,
     "tipo": "bicicleta",
     "nivel": "moderado"
-  }]
+  },
+{
+    "fecha": "2025-07-25",
+    "tiempo": 110,
+    "edad": 61,
+    "peso": 73.4,
+    "calorias": 575,
+    "distancia": 25.2,
+    "velocidad": 13.89,
+    "tipo": "bicicleta",
+    "nivel": "moderado"
+}]
 
 
 
