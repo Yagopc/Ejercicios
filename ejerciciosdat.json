@@ -504,6 +504,7 @@
     "tipo": "bicicleta",
     "nivel": "moderado"
   },
+  {
     "fecha": "2025-07-27",
     "tiempo": 73,
     "edad": 61,
@@ -512,7 +513,9 @@
     "distancia": 7.2,
     "velocidad": 5.7,
     "tipo": "andar",
-    "nivel": "moderado"]
+    "nivel": "moderado"
+  }
+]
 
 
 
