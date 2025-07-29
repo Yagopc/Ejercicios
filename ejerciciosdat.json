@@ -515,9 +515,20 @@
     "tipo": "andar",
     "nivel": "moderado"
   },
+    {
+    "fecha": "2025-07-28",
+    "tiempo": 73,
+    "edad": 61,
+    "peso": 72.2,
+    "calorias": 524,
+    "distancia": 7.2,
+    "velocidad": 5.7,
+    "tipo": "andar",
+    "nivel": "moderado"
+  },
   
   {
-    "fecha": "2025-07-28",
+    "fecha": "2025-07-29",
     "tiempo": 73,
     "edad": 61,
     "peso": 72,
