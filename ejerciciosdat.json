@@ -737,7 +737,22 @@
     "velocidad": 5.7,
     "tipo": "andar",
     "nivel": "moderado"
+    } ,
+  {
+    "fecha": "2025-08-17",
+    "tiempo": 113,
+    "edad": 61,
+    "peso": 70.6,
+    "calorias": 801,
+    "distancia": 10.5,
+    "velocidad": 5.7,
+    "tipo": "andar",
+    "nivel": "moderado"
     }  
+
+  
+
+  
 
   
 
