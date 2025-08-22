@@ -778,14 +778,23 @@
     },{    "fecha": "2025-08-21",
     "tiempo": 113,
     "edad": 61,
-    "peso": 70.3,
+    "peso": 69.3,
     "calorias": 801,
     "distancia": 10.5,
     "velocidad": 5.7,
     "tipo": "andar",
     "nivel": "moderado"
     }  
-
+,{    "fecha": "2025-08-22",
+    "tiempo": 113,
+    "edad": 61,
+    "peso": 68.5,
+    "calorias": 801,
+    "distancia": 10.5,
+    "velocidad": 5.7,
+    "tipo": "andar",
+    "nivel": "moderado"
+    }  
   
 
   
