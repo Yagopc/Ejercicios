@@ -795,39 +795,52 @@
     "tipo": "andar",
     "nivel": "moderado"
     },
-  {    "fecha": "2025-08-23",
+  
+  {
+    "fecha": "2025-08-23",
     "tiempo": 113,
     "edad": 61,
     "peso": 68.4,
-    "calorias": 801,
+    "calorias": 589,
     "distancia": 11,
-    "velocidad": 5.7,
+    "velocidad": 5.8,
     "tipo": "andar",
     "nivel": "moderado"
-    },
+  },
+  
+  
   {
     "fecha": "2025-08-24",
-    "tiempo": 64,
+    "tiempo": 74,
+    "edad": 61,
+    "peso": 68.4,
+    "calorias": 298,
+    "distancia": 6.4,
+    "velocidad": 5.2,
+    "tipo": "andar",
+    "nivel": "moderado"
+  },
+  {
+    "fecha": "2025-08-25",
+    "tiempo": 74,
     "edad": 61,
     "peso": 68.2,
-    "calorias": 242,
+    "calorias": 298,
     "distancia": 6.4,
-    "velocidad": 6,
+    "velocidad": 5.2,
+    "tipo": "andar",
+    "nivel": "moderado"
+  },
+  {
+    "fecha": "2025-08-26",
+    "tiempo": 74,
+    "edad": 61,
+    "peso": 68.3,
+    "calorias": 299,
+    "distancia": 6.4,
+    "velocidad": 5.2,
     "tipo": "andar",
     "nivel": "moderado"
   }
+  ]
   
-
-  
-]
-
-
-
-
-
-
-
-
-
-
-
