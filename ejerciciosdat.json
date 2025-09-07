@@ -898,7 +898,8 @@
     "tipo": "andar",
     "nivel": "moderado"
   },
-    {
+    
+  {
     "fecha": "2025-09-01",
     "tiempo": 64,
     "edad": 61,
@@ -908,8 +909,8 @@
     "velocidad": 6,
     "tipo": "andar",
     "nivel": "moderado"
-    },
-    {
+  },
+  {
     "fecha": "2025-09-02",
     "tiempo": 64,
     "edad": 61,
@@ -919,9 +920,8 @@
     "velocidad": 6,
     "tipo": "andar",
     "nivel": "moderado"
-    },
-  
-    {
+  },
+  {
     "fecha": "2025-09-03",
     "tiempo": 64,
     "edad": 61,
@@ -931,7 +931,7 @@
     "velocidad": 6,
     "tipo": "andar",
     "nivel": "moderado"
-    },
+  },
   {
     "fecha": "2025-09-04",
     "tiempo": 64,
@@ -944,7 +944,7 @@
     "nivel": "moderado"
   },
   {
-      "fecha": "2025-09-05",
+    "fecha": "2025-09-05",
     "tiempo": 60,
     "edad": 61,
     "peso": 67,
@@ -955,7 +955,7 @@
     "nivel": "leve"
   },
   {
-      "fecha": "2025-09-06",
+    "fecha": "2025-09-06",
     "tiempo": 30,
     "edad": 61,
     "peso": 67,
@@ -966,7 +966,7 @@
     "nivel": "leve"
   },
   {
-      "fecha": "2025-09-07",
+    "fecha": "2025-09-07",
     "tiempo": 60,
     "edad": 61,
     "peso": 66.6,
@@ -976,6 +976,4 @@
     "tipo": "andar",
     "nivel": "leve"
   }
-  
-  ]
-  
+    ]
