@@ -942,6 +942,39 @@
     "velocidad": 6,
     "tipo": "andar",
     "nivel": "moderado"
+  },
+  {
+      "fecha": "2025-09-05",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 67,
+    "calorias": 380,
+    "distancia": 6.5,
+    "velocidad": 6,
+    "tipo": "andar",
+    "nivel": "leve"
+  },{
+      "fecha": "2025-09-06",
+    "tiempo": 30,
+    "edad": 61,
+    "peso": 67,
+    "calorias": 280,
+    "distancia": 8.5,
+    "velocidad": 17,
+    "tipo": "bicicleta",
+    "nivel": "leve"
+  },
+  {
+      "fecha": "2025-09-07",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 66.6,
+    "calorias": 380,
+    "distancia": 6.5,
+    "velocidad": 6,
+    "tipo": "andar",
+    "nivel": "leve"
   }
+  
   ]
   
