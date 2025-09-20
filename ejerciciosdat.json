@@ -1091,13 +1091,37 @@
     "fecha": "2025-09-18",
     "tiempo": 60,
     "edad": 61,
-    "peso": 66.9,
+    "peso": 66.7,
+    "calorias": 380,
+    "distancia": 6.5,
+    "velocidad": 6,
+    "tipo": "andar",
+    "nivel": "leve"
+    },
+      {
+    "fecha": "2025-09-19",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 66.7,
+    "calorias": 380,
+    "distancia": 6.5,
+    "velocidad": 6,
+    "tipo": "andar",
+    "nivel": "leve"
+    },
+      {
+    "fecha": "2025-09-20",
+    "tiempo": 60,
+    "edad": 61,
+    "peso": 66.3,
     "calorias": 380,
     "distancia": 6.5,
     "velocidad": 6,
     "tipo": "andar",
     "nivel": "leve"
     }
+  
+  
   
 
 
